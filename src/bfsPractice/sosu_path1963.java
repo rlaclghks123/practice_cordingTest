@@ -30,9 +30,6 @@ public class sosu_path1963 {
 		}
 	}
 	
-	for(int i=0; i<=10000; i++) {						//소수 : false, 소수아님:true를 반대로 바꿔줌 
-		prime[i]=!prime[i];
-	}
 	
 	int t=sc.nextInt();				
 	while(t-->0) {
@@ -52,7 +49,7 @@ public class sosu_path1963 {
 				for(int j=0; j<=9; j++) {
 					int next=change(now,i,j);
 					if(next!=-1) {						//4자리가 가능하다면 
-						if(prime[next] && c[next]==false) {		//소수 이면서 && 방문한적이 없을경우 
+						if(!prime[next] && c[next]==false) {		//소수 이면서 && 방문한적이 없을경우 
 							q.add(next);
 							c[next]=true;
 							d[next]=d[now]+1;					//횟수 추가 
@@ -61,7 +58,11 @@ public class sosu_path1963 {
 				}
 			}	
 		}
-		System.out.println(d[m]);						//m번째 횟수를 출력 
+		if(d[m]==-1) {
+			System.out.println("Impossible");		//불가능한 경우 Impossible 출력 
+		}else {
+			System.out.println(d[m]);				//가능하다면 d[m] 최소값 출력 			
+		}
 	}
 	}
 
