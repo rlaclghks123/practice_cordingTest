@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class escape_movig_miro {
+public class Escape_movig_miro16954 {
 
 	static int dx[] = {1,-1,0,0,1,1,-1,-1,0};	//상하좌우,대각,제자리 
 	static int dy[] = {0,0,1,-1,1,-1,1,-1,0};

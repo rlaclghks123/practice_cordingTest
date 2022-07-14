@@ -5,7 +5,7 @@ import java.util.*;
 // 적록색약이 아닐 경우, RGB 각각 그룹을 만들고, 적록색약일 경우 R,G는 같은 그룹으로 만들어준다.
 //한 정점에서 이어지는 정점을 묶기때문에 BFS사용 
 
-public class red_green_medicine {
+public class Red_green_medicine10026 {
 
 	static int dx[] = {1,-1,0,0};
 	static int dy[] = {0,0,1,-1};

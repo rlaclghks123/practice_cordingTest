@@ -2,7 +2,7 @@ package bfsPractice;
 
 import java.util.*;
 
-public class sosu_path1963 {
+public class Sosu_path1963 {
 
 	// num:기존 비밀번호,    index: 바꿀 비밀번호의 index위치 ,  digit:바꿀 숫자 
 	static int change(int num, int index, int digit) {	//비밀번호의 숫자를 바꾸는 함수 	

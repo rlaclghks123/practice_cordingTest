@@ -31,7 +31,7 @@ class Meeting implements Comparable<Meeting> {
 		}
 	}
 }
-public class mettingRoomAssignment1931 {
+public class MettingRoomAssignment1931 {
 
 	public static void main(String[] args) {
 

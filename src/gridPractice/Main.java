@@ -9,18 +9,23 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int n=sc.nextInt();
-		int m=sc.nextInt();
 		
 		int a[] = new int[n];
+		
 		for(int i=0; i<n; i++) {
 			a[i]=sc.nextInt();
 		}
-
-		int cnt=0;
-		for(int i=n-1; i>=0; i--) {
-			cnt+=m/a[i];
-			m=m%a[i];
+		
+		
+		int ans=0;
+		int sum=0;
+		Arrays.sort(a,0,n);
+		
+		for(int i=0; i<n; i++) {
+				sum+=a[i];
+				ans+=sum;
 		}
-		System.out.println(cnt);
-	}
+		
+		System.out.println(ans);
+		}
 }

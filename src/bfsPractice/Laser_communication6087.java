@@ -6,7 +6,7 @@ import java.util.*;
 //방향이 바뀌면 거울의 개수가 추가되는 경우이다. 
 // 방향이 바뀌면 을 어떻게 표현할것인가? => while문을 통해 범위를 벗어나거나 벽을 마주치면 멈춰주는 방식 사용
 
-public class laser_communication {
+public class Laser_communication6087 {
 
 	static int dx[] = {1,-1,0,0};
 	static int dy[] = {0,0,1,-1};

@@ -13,7 +13,7 @@ class Pair{
 }
 
 
-public class baby_shark {
+public class Baby_shark16236 {
 	
 	static int dx[] = {1,-1,0,0};
 	static int dy[] = {0,0,1,-1};

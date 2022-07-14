@@ -2,7 +2,7 @@ package gridPractice;
 
 import java.util.*;
 
-public class coin11047 {
+public class Coin11047 {
 	// 동전의 가격이 배수 관계 이므로 grid알고리즘 사용 
 	// 기준 : 가격이 높은거에 따라 나눔 (배수관계) 
 	public static void main(String[] args) {

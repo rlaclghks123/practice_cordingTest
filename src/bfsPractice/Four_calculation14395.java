@@ -2,7 +2,7 @@ package bfsPractice;
 
 import java.util.*;
 
-public class four_calculation {
+public class Four_calculation14395 {
 
 	// 최소 연산을 구하는 문제 -> 숫자 - 숫자의 최단거리 BFS
 	// 범위가 큰데 어떻게 BFS? => 실제 -,/는 거의 안쓰고, +,*만 쓰는데 제곱수 이므로 숫자자체는 얼마 안큼 
