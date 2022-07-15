@@ -3,7 +3,29 @@ package bfsPractice;
 import java.io.*;
 import java.util.*;
 
-
+class Meeting implements Comparable<Meeting>{
+	int start;
+	int end;
+	Meeting(int start, int end){
+		this.start=start;
+		this.end=end;
+	}
+	public int compareTo(Meeting That) {
+		if(this.end<That.end) {
+			return -1;
+		}else if(this.end==That.end) {
+			if(this.start<That.start) {
+				return -1;
+			}else if(this.start==That.start) {
+				return 0;
+			}else {
+				return 1;
+			}
+		}else {
+			return 1;
+		}
+	}
+}
 
 
 public class Main {
@@ -14,51 +36,27 @@ public class Main {
     	
 	Scanner sc = new Scanner(System.in);	
 	
+	int n=sc.nextInt();
 	
-	long a =sc.nextLong();
-	long b=sc.nextLong();
+	Meeting a[] = new Meeting[n];
 	
-	Queue<Long> q = new LinkedList<Long>();
-    Queue<String> qs = new LinkedList<String>();
-    HashSet<Long> check = new HashSet<Long>();
-    q.add(a);
-    qs.add("");
-    check.add(a);
+	for(int i=0; i<n; i++) {
+		int start=sc.nextInt();
+		int end=sc.nextInt();
+		a[i]=new Meeting(start,end);
+	}
 	
-	while(!q.isEmpty()) {
-		long x=q.remove();
-		String str=qs.remove();
-		
-		if(x==b) {
-			if(str.length()==0) {
-				str="0";
-			}
-			System.out.println(str);
-			System.exit(0);
-		}
-		if(0<=x*x && x*x<=limit && check.contains(x*x)==false) {
-			q.add(x*x);
-			qs.add(str+"*");
-			check.add(x*x);
-		}
-		if(0<=x+x && x+x<=limit && check.contains(x+x)==false) {
-			q.add(x+x);
-			qs.add(str+"+");
-			check.add(x+x);
-		}
-		if(0<=x-x && x-x<=limit && check.contains(x-x)==false) {
-			q.add(x-x);
-			qs.add(str+"-");
-			check.add(x-x);
-		}
-		if(x!=0 && 0<=x/x && x/x<=limit && check.contains(x/x)==false) {
-			q.add(x/x);
-			qs.add(str+"/");
-			check.add(x/x);
+	Arrays.sort(a);
+	
+	int last=-1;
+	int ans=0;
+	for(int i=0; i<n; i++) {
+		if(last<=a[i].start) {
+			last=a[i].end;
+			ans++;
 		}
 	}
-	System.out.println(-1);
-	
+	System.out.println(ans);
    }
 }
 
