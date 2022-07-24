@@ -30,8 +30,8 @@ public class changeWord {
 	                if(begin.charAt(j)!=words[i].charAt(j)){	//철자가 다르면 k에 ++
 	                    k++;
 	                }
-	            }
-	            if(k==1){			//철자가 한개 다르다면 
+	            } 
+	            if(k==1){			//철자가 한개 다르다면
 	                c[i]=true;		//방문처리 
 	                dfs(words[i],target,words,cnt+1);	//dfs에 cnt+1을 해준다. 
 	                c[i]=false;		//다음을 위해 false 처리 
