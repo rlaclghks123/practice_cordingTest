@@ -11,6 +11,7 @@ public class getItem {
 		static int dy[] = {0,0,1,-1};
 		static int map[][];
 		
+		
 		public int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
 	        answer=0;        
 	        map= new int[101][101];
