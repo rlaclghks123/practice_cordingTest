@@ -14,7 +14,7 @@ public class travleRoute {
 	        c= new boolean[tickets.length];
 	        allRoutes = new ArrayList<>();
 	        int cnt=0;
-	        String As = "SKSKSK";
+	     
 	        
 	            
 	        bfs("ICN","ICN",tickets,cnt);		//시작을 ICN, 현재 경로가 ICN 이므로 
