@@ -3,9 +3,9 @@ package bfsPractice;
 import java.io.IOException;
 import java.util.*;
 
-class Pair{
+class Pair16236{
 	int dist,x,y;
-	Pair(int dist, int x, int y){
+	Pair16236(int dist, int x, int y){
 		this.dist = dist;
 		this.x = x;
 		this.y = y;
@@ -18,7 +18,7 @@ public class Baby_shark16236 {
 	static int dx[] = {1,-1,0,0};
 	static int dy[] = {0,0,1,-1};
 	
-	static Pair bfs(int a[][], int sx, int sy, int size) {
+	static Pair16236 bfs(int a[][], int sx, int sy, int size) {
 		int n=a.length;
 		int d[][] = new int [n][n];
 		
@@ -31,7 +31,7 @@ public class Baby_shark16236 {
 		Queue<Integer> q = new LinkedList<>();
 		q.add(sx); q.add(sy);
 		d[sx][sy]=0;								//방문처리 
-		ArrayList<Pair> ans = new ArrayList<>();
+		ArrayList<Pair16236> ans = new ArrayList<>();
 		
 		while(!q.isEmpty()) {
 			int x=q.remove();
@@ -56,7 +56,7 @@ public class Baby_shark16236 {
 						q.add(nx); q.add(ny);
 						d[nx][ny]=d[x][y]+1;
 						if(eat) {					//먹으면 거리,위치를 늘려준다. 
-							ans.add(new Pair(d[nx][ny],nx,ny));
+							ans.add(new Pair16236(d[nx][ny],nx,ny));
 						}
 					}
 				}
@@ -67,8 +67,8 @@ public class Baby_shark16236 {
 			return null;
 		}
 		
-		Pair best = ans.get(0);					//최소값을 구하기 위해 
-		for(Pair p:ans) {
+		Pair16236 best = ans.get(0);					//최소값을 구하기 위해 
+		for(Pair16236 p:ans) {
 			if(best.dist >p.dist) {
 				best=p;
 			}else if(best.dist == p.dist && best.x>p.x) {		//문제에서 거리가 같으면 왼쪽친구 먼저 
@@ -106,7 +106,7 @@ public class Baby_shark16236 {
 		int exp=0;						// 사이즈만큼 경험치가 커지면 사이즈가 커진다.
 		
 		while(true) {
-			Pair p = bfs(a,x,y,size);		//아기상어가 움직이는 bfs 
+			Pair16236 p = bfs(a,x,y,size);		//아기상어가 움직이는 bfs 
 			if(p==null) break;				//더이상 없으면 break;
 			
 			a[p.x][p.y]=0;				//지나간곳은 빈칸처리 
