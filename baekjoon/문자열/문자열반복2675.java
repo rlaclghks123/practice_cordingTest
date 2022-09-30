@@ -22,7 +22,7 @@ public class 문자열반복2675 {
 			}
 			System.out.println();					//한줄 띄어준다.
 			
-		}
+		} 
 	}
 }
 
